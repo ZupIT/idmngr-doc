@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>{{ .Site.Title }}</title>
+    <!-- Adicione as tags de estilo necessárias -->
+    <link rel="stylesheet" href="{{ "css/main.css" | relURL }}">
+    <link rel="stylesheet" href="{{ "css/docsy.css" | relURL }}">
+  </head>
+  <body>
+    <main class="main-content">
+      <div class="container">
+        <!-- Adicione o conteúdo da sua página aqui -->
+        <h1>{{ .Title }}</h1>
+        {{ .Content }}
+      </div>
+    </main>
+    <!-- Adicione as tags de script necessárias -->
+    <script src="{{ "js/main.js" | relURL }}"></script>
+  </body>
+</html>

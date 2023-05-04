@@ -1,0 +1,10 @@
+baseURL = '/'
+languageCode = 'en-us'
+title = 'Documentação'
+home = "content/_index.md"
+uglyURLs = true
+
+[params]
+mainSections = ["_index"]
+theme = "docsy"
+
