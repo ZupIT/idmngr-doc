@@ -9,7 +9,7 @@
         <ul class="{{ cond (eq $.Site.Language.LanguageDirection "rtl") "pr0 ml3" "pl0 mr3" }}">
           {{ range .Site.Menus.main }}
           <li class="list f5 f4-ns fw4 dib {{ cond (eq $.Site.Language.LanguageDirection "rtl") "pl3" "pr3" }}">
-            <a class="hover-black no-underline black-90" href="{{ .URL }}" title="{{ i18n "pageTitle" . }}" style="color: #0e1e33!important; font-weight: bold;">
+            <a class="hover-black no-underline black-90" onmouseover="this.style.color='#3D84D8'; this.style.textDecoration = 'underline'" onmouseout="this.style.color='#0e1e33'; this.style.textDecoration = 'none'" href="{{ .URL }}" title="{{ i18n "pageTitle" . }}" style="color: #0e1e33!important; font-weight: bold;">
               {{ .Name }}
             </a>
           </li>

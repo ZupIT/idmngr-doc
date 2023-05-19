@@ -14,7 +14,7 @@ enableRobotsTXT = true
   [languages.en]
     title = "ZestID"
     weight = 1
-    contentDir = "content/en"
+    contentDir = "content"
     # languageDirection = 'rtl' for Right-To-Left languages
 
 [sitemap]

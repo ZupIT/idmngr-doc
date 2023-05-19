@@ -1,5 +1,5 @@
 ---
-title: "Bem vindo ao Portal ZestID"
+title: "ZestID"
 
 description: Nossa base de documentações está aqui.
 ---
