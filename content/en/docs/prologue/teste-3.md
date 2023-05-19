@@ -1,7 +1,7 @@
 ---
 title: "Teste 3"
-description: "Doks comes with commands for common tasks."
-lead: "Doks comes with commands for common tasks."
+description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin rhoncus aliquam tellus, vel feugiat ligula cursus non. Curabitur ultrices mi ac."
+lead: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin rhoncus aliquam tellus, vel feugiat ligula cursus non. Curabitur ultrices mi ac."
 date: 2020-10-13T15:21:01+02:00
 lastmod: 2020-10-13T15:21:01+02:00
 draft: false
@@ -21,7 +21,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin rhoncus aliquam t
 
 {{< alert icon="👉" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin rhoncus aliquam tellus." />}}
 
-Step-by-step instructions on how to start a new Doks project. [Tutorial →](https://getdoks.org/tutorial/introduction/)
+Step-by-step instructions on how to start a new Doks project.
 
 ### Quick Start
 

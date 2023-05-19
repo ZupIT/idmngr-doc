@@ -21,7 +21,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin rhoncus aliquam t
 
 {{< alert icon="👉" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin rhoncus aliquam tellus." />}}
 
-Step-by-step instructions on how to start a new Doks project. [Tutorial →](https://getdoks.org/tutorial/introduction/)
+Step-by-step instructions on how to start a new Doks project.
 
 ### Quick Start
 
