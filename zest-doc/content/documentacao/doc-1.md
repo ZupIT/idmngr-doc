@@ -2,8 +2,7 @@
 date: 2017-04-09T10:58:08-04:00
 description: "..."
 featured_image: ""
-tags: ["scene"]
-title: "Exemplo de Documentação"
+title: "Doc 1"
 ---
 
 Three hundred and forty-eight years, six months, and nineteen days ago

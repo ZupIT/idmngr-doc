@@ -24,4 +24,3 @@ enableRobotsTXT = true
 
 [params]
   background_color_class = "bg-white"
-  recent_posts_number = 3
