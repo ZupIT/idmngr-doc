@@ -1,22 +1,20 @@
 {{ define "main" }}
-    {{ $data := .Data }}
-  <article class="cf pa3 pa4-m pa4-l">
-    <div class="measure-wide-l center f4 lh-copy nested-copy-line-height nested-links {{ $.Param "text_color" | default "mid-gray" }}">
-      {{ .Content }}
-    </div>
-  </article>
-  <div class="mw8 center">
-    <section class="ph4">
-      {{ range $term := .Data.Pages }}
-        <h2 class="f1">
-          <a href="{{ $term.RelPermalink }}" class="link blue hover-black">
-            {{ $.Data.Singular | humanize }}: {{ $term.LinkTitle }}
-          </a>
-        </h2>
-        {{ range $term.Pages }}
-          {{ .Render "summary" }}
-        {{ end }}
+<div class="row justify-content-center">
+  <div class="col-md-12 col-lg-10 col-xl-8">
+    <h1 class="text-center">{{ .Title }}</h1>
+    <div class="text-center">{{ .Content }}</div>
+    <div class="card-list">
+      {{ range .Paginator.Pages }}
+        <div class="card card-terms my-3">
+          <div class="card-body">
+            <article>
+              <a class="stretched-link" href="{{ .RelPermalink }}">{{ .Params.title | title }} &rarr;</a>
+            </article>
+          </div>
+        </div>
       {{ end }}
-    </section>
+    </div>
+    {{ template "_internal/pagination.html" . }}
   </div>
+</div>
 {{ end }}

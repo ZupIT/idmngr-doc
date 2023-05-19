@@ -1,47 +1,60 @@
 {{ define "main" }}
- <article class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy {{ $.Param "text_color" | default "mid-gray" }}">
-    {{ .Content }}
-  </article>
-  {{ $mainSections := .Site.Params.mainSections | default (slice "post") }}
-  <!-- {{ $section := where .Site.RegularPages "Section" "in" $mainSections }} -->
-  {{ $section_count := len $section }}
-  {{ if ge $section_count 1 }}
-    <!-- {{ $section_name := index (.Site.Params.mainSections) 0 }} -->
+<section class="section container-fluid mt-n3 pb-3">
+  <div class="row justify-content-center">
+    <div class="col-lg-12 text-center">
+      <h1 class="mt-0">{{ .Title }}</h1>
+    </div>
+    <div class="col-lg-9 col-xl-8 text-center">
+      <p class="lead">{{ .Params.lead | safeHTML }}</p>
+      <a class="btn btn-primary btn-lg px-4 mb-2" href="/docs/{{ if .Site.Params.options.docsVersioning }}{{ .Site.Params.docsVersion }}/{{ end }}prologue/introduction/" role="button">{{ i18n "get-started" }}</a>
+    </div>
+  </div>
+</section>
+{{ end }}
 
-    <div class="pa3 pa4-ns w-100 w-70-ns center">
-       {{ with .Site.GetPage "section" $section_name }}
-          <h1 class="flex-none">
-            {{ $.Param "recent_copy" | default (i18n "recentTitle" .) }}
-          </h1>
-        {{ end }}
-
-      {{ $n_posts := $.Param "recent_posts_number" | default 3 }}
-
-      <section class="w-100 mw8">
-        {{ range (first $n_posts $section) }}
-          <div class="relative w-100 mb4">
-            {{ .Render "summary-with-image" }}
-          </div>
-        {{ end }}
-      </section>
-
-      {{ if ge $section_count (add $n_posts 1) }}
-      <section class="w-100">
-        <h1 class="f3">{{ i18n "more" }}</h1>
-        {{ range (first 4 (after $n_posts $section))  }}
-          <h2 class="f5 fw4 mb4 dib {{ cond (eq $.Site.Language.LanguageDirection "rtl") "ml3" "mr3" }}">
-            <a href="{{ .RelPermalink }}" class="link black dim">
-              {{ .Title }}
-            </a>
-          </h2>
-        {{ end }}
-
-        {{ with .Site.GetPage "section" $section_name }}
-          <a href="{{ .RelPermalink }}" class="link db f6 pa2 br3 bg-mid-gray white dim w4 tc">{{ i18n "allTitle" . }}</a>
-        {{ end }}
-        </section>
-      {{ end }}
-
+{{ define "sidebar-prefooter" }}
+  {{ if eq $.Site.Language.LanguageName "English" }}
+  <section class="section section-sm">
+    <div class="container">
+      <div class="row justify-content-center text-center">
+        <div class="col-lg-5">
+          <h2 class="h4">Lorem ipsum</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin rhoncus aliquam tellus, vel feugiat ligula cursus non. Curabitur ultrices mi ac.</p>
+        </div>
+        <div class="col-lg-5">
+          <h2 class="h4">Lorem ipsum ⚡️</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin rhoncus aliquam tellus, vel feugiat ligula cursus non. Curabitur ultrices mi ac.</p>
+        </div>
+        <div class="col-lg-5">
+          <h2 class="h4">Lorem ipsum</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin rhoncus aliquam tellus, vel feugiat ligula cursus non. Curabitur ultrices mi ac.</p>
+        </div>
       </div>
+      <div class="row justify-content-center text-center">
+        <div class="col-lg-5">
+          <h2 class="h4">Lorem ipsum</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin rhoncus aliquam tellus, vel feugiat ligula cursus non. Curabitur ultrices mi ac.</p>
+        </div>
+        <div class="col-lg-5">
+          <h2 class="h4">Lorem ipsum</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin rhoncus aliquam tellus, vel feugiat ligula cursus non. Curabitur ultrices mi ac.</p>
+        </div>
+        <div class="col-lg-5">
+          <h2 class="h4">Lorem ipsum</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin rhoncus aliquam tellus, vel feugiat ligula cursus non. Curabitur ultrices mi ac.</p>
+        </div>
+      </div>
+    </div>
+  </section>
   {{ end }}
+{{ end }}
+
+{{ define "sidebar-footer" }}
+<section class="section section-sm container-fluid">
+  <div class="row justify-content-center text-center">
+    <div class="col-lg-9">
+      {{- .Content -}}
+    </div>
+  </div>
+</section>
 {{ end }}
