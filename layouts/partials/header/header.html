@@ -12,8 +12,7 @@
   <nav class="container-{{ if .Site.Params.options.fullWidth }}fluid{{ else }}xxl{{ end }} flex-wrap flex-lg-nowrap" aria-label="Main navigation">
 
     <a class="navbar-brand order-0" href="{{ .Site.BaseURL | relLangURL }}" aria-label="{{ .Site.Params.Title }}">
-      {{ partial "svg/logo_extended.svg" }}
-
+        {{ partial "svg/logo_extended.svg" }}
     </a>
 
     {{ if (in .Site.Params.sections.sectionNav .Section) -}}
