@@ -34,38 +34,39 @@
     "precheck": "npm version",
     "check": "exec-bin node_modules/.bin/hugo/hugo version",
     "copy:katex-fonts": "shx cp ./node_modules/katex/dist/fonts/* ./static/fonts/",
-    "postinstall": "hugo-installer --version otherDependencies.hugo --extended --destination node_modules/.bin/hugo",
     "version": "auto-changelog -p && git add CHANGELOG.md"
   },
   "devDependencies": {
-    "@babel/cli": "^7.18",
-    "@babel/core": "^7.18",
-    "@babel/preset-env": "^7.18",
+    "@babel/cli": "^7.21.5",
+    "@babel/core": "^7.22.1",
+    "@babel/preset-env": "^7.22.2",
     "@fullhuman/postcss-purgecss": "^4.1",
     "@hyas/images": "^0.2.2",
     "auto-changelog": "^2.4",
-    "autoprefixer": "^10.4",
-    "bootstrap": "^5.2.0-beta1",
+    "autoprefixer": "^10.4.14",
+    "bootstrap": "^5.2.3",
     "clipboard": "^2.0",
-    "eslint": "^8.19",
+    "eslint": "^8.41.0",
     "exec-bin": "^1.0.0",
-    "flexsearch": "^0.7.21",
-    "highlight.js": "^11.5",
+    "flexsearch": "^0.7.31",
+    "highlight.js": "^11.8.0",
+    "http-cache-semantics": "^4.1.1",
     "hugo-installer": ">=4.0.1",
     "instant.page": "^5.1",
+    "json5": "^2.2.3",
     "katex": "^0.16",
     "lazysizes": "^5.3",
     "markdownlint-cli2": "^0.4.0",
     "netlify-plugin-submit-sitemap": "^0.4.0",
     "node-fetch": "^3.2",
-    "postcss": "^8.4",
+    "postcss": "^8.4.23",
     "postcss-cli": "^10.0",
     "purgecss-whitelister": "^2.4",
     "shx": "^0.3.4",
     "stylelint": "^14.9",
     "stylelint-config-standard-scss": "^4.0"
   },
-  "otherDependencies": {
-    "hugo": "0.107.0"
+  "dependencies": {
+    "@types/http-cache-semantics": "^4.0.1"
   }
 }
