@@ -1,4 +1,4 @@
-baseurl = "https://doks.netlify.app/"
+baseurl = "https://zupit.github.io/idmngr-doc/"
 canonifyURLs = false
 disableAliases = true
 disableHugoGeneratorInject = true

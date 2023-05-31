@@ -12,7 +12,7 @@ description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin rh
 ## Open Graph
 images = ["doks.png"]
 ogLocale = "en_US"
-domainTLD = "doks.netlify.app"
+domainTLD = "https://zupit.github.io/idmngr-doc/"
 titleHome = "Doks Theme"
 
 ## Twitter Cards
