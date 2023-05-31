@@ -35,6 +35,11 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: 14
+      - name: Install Hugo
+        run: |
+          wget https://github.com/gohugoio/hugo/releases/download/v0.88.1/hugo_0.88.1_Linux-64bit.tar.gz
+          tar -xf hugo_0.88.1_Linux-64bit.tar.gz
+          sudo mv hugo /usr/local/bin/
       - name: Build
         run: |
           npm install  # ou comando para instalar dependências
@@ -45,3 +50,4 @@ jobs:
         with:
           branch: master  # altere aqui para a branch que deseja implantar
           folder: ./public  # altere aqui para o diretório onde estão os arquivos estáticos gerados
+        
