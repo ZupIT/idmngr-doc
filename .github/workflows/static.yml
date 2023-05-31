@@ -40,6 +40,10 @@ jobs:
           wget https://github.com/gohugoio/hugo/releases/download/v0.111.3/hugo_extended_0.111.3_Linux-64bit.tar.gz
           tar -xf hugo_extended_0.111.3_Linux-64bit.tar.gz
           sudo mv hugo /usr/local/bin/
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: ./public
       - name: Build
         run: |
           npm install  # ou comando para instalar dependências
