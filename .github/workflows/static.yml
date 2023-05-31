@@ -35,10 +35,15 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: 14
+      - name: Install Hugo
+        run: |
+          wget https://github.com/gohugoio/hugo/releases/download/v0.88.1/hugo_extended_0.88.1_Linux-64bit.tar.gz
+          tar -xf hugo_extended_0.88.1_Linux-64bit.tar.gz
+          sudo mv hugo /usr/local/bin/
       - name: Build
         run: |
           npm install  # ou comando para instalar dependências
-          hugo --minify -d ./public   # ou comando para gerar os arquivos estáticos
+          npm run build   # ou comando para gerar os arquivos estáticos
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
