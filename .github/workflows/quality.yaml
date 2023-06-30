@@ -1,0 +1,15 @@
+---
+name: Quality
+
+on: pull_request  # yamllint disable-line rule:truthy
+
+jobs:
+  js-ts-lint-npm:
+    name: SecGov
+    uses: ZupIT/secgov-workflows/.github/workflows/js-ts-lint-npm.yaml@main
+    with:
+      node-version: 14
+
+  yaml-lint:
+    name: SecGov
+    uses: ZupIT/secgov-workflows/.github/workflows/yaml-lint.yaml@main
