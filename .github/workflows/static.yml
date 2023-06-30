@@ -1,10 +1,12 @@
-# Simple workflow for deploying static content to GitHub Pages
+---
+# yamllint disable rule:line-length
 name: Deploy static content to Pages
 
-on:
+on:  # yamllint disable-line rule:truthy
   # Runs on pushes targeting the default branch
   push:
-    branches: ["master"]
+    branches:
+      - main
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -54,4 +56,3 @@ jobs:
         with:
           branch: master  # altere aqui para a branch que deseja implantar
           folder: ./public  # altere aqui para o diretório onde estão os arquivos estáticos gerados
-        
