@@ -1,0 +1,8 @@
+{
+  "horusecCliEnableGitHistoryAnalysis": true,
+  "horusecCliEnableInformationSeverity": true,
+  "horusecCliEnableOwaspDependencyCheck": true,
+  "horusecCliEnableShellcheck": true,
+  "horusecCliReturnErrorIfFoundVulnerability": true,
+  "horusecCliTimeoutInSecondsAnalysis": 3600
+}

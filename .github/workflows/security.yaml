@@ -1,0 +1,16 @@
+---
+name: Security
+
+on: pull_request  # yamllint disable-line rule:truthy
+
+jobs:
+  appsec:
+    name: AppSec
+    uses: ZupIT/appsec-workflow/.github/workflows/appsec-workflow.yml@v1.4
+    with:
+      debug: false
+      repository: "${{ github.event.repository.name }}"
+      organization: "${{ github.repository_owner }}"
+      environment: dev
+    secrets:
+      report-secret: "${{ secrets.VULN_MNG_REPORT_KEY }}"
